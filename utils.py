@@ -29,6 +29,7 @@ def get_spectrograms(fpath):
       mag: A 2d array of shape (T, 1+n_fft/2) and dtype of float32.
     '''
     # Loading sound file
+    #librosa.load进行参数的提取，y:音频时间序列 sr：采样率
     y, sr = librosa.load(fpath, sr=hp.sr)
 
     # Trimming
